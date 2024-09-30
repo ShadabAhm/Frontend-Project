@@ -1,0 +1,19 @@
+
+<div *ngIf="shouldShowLayout()" class="layout-wrapper" [ngClass]="containerClass">
+    <app-header (sidebarToggle)="toggleSidebar()" (rightSidebarToggle)="toggleRightSidebar()" (bottomSidebarToggle)="toggleBottomSidebar()"></app-header>
+    <div class="layout-sidebar" [ngClass]="{'layout-static-inactive': isSidebarClosed}">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="layout-main-container" 
+         [ngClass]="{'layout-static-inactive': isSidebarClosed, 'right-sidebar-active': rightSidebarVisible, 'bottom-sidebar-active': bottomSidebarVisible}">
+        <div class="layout-main">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <app-right-sidebar [visible]="rightSidebarVisible"></app-right-sidebar>
+    <app-bottom-sidebar [visible]="bottomSidebarVisible"></app-bottom-sidebar>
+</div>
+
+<div *ngIf="!shouldShowLayout()">
+    <router-outlet></router-outlet>
+</div>

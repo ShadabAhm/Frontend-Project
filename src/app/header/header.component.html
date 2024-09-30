@@ -1,0 +1,17 @@
+<div class="layout-topbar">
+    <a class="layout-topbar-logo ml-3" routerLink="">
+        <img src="assets/images/logo-img.png" alt="Image" class="p-3" />
+    </a>
+    <button class="p-link layout-menu-button layout-topbar-button bg-black" (click)="toggleSidebar()">
+        <i class="pi pi-bars text-color"></i>
+    </button>
+    <button class="p-link layout-menu-button layout-topbar-button bg-black" (click)="toggleRightSidebar()">
+        <i class="pi pi-align-right text-color"></i> 
+    </button>
+    <button class="p-link layout-menu-button layout-topbar-button bg-black" (click)="toggleBottomSidebar()">
+        <i class="pi pi-sort-alt text-color"></i>
+    </button>
+    <div class="signOff-btn bg-primary p-3">
+        <button class="p-link text-white" (click)="signOff()">Sign Off</button>
+    </div>
+</div>

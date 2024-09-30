@@ -1,0 +1,111 @@
+<div class="grid flex-column overflow-hidden grid-nogutter">
+    <div class="col-12 flex flex-column h-full">
+        <div class="mt-4 grid grid-nogutter">
+            <div class="col-12">
+                <div class="mt-4">
+                    <h1 class="heading-text mt-4 font-medium">Model Performance <br> Metrics and results</h1>
+                    <p class="p-text mt-4">The following predictions are being done using the BL_GB
+                        <br><span>Model</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="search-inputgroup">
+            <input type="text" pInputText placeholder=" Search" style="text-decoration: none;">
+        </div>
+    </div>
+
+    <div class="col mt-4 matrics-table">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Created On</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr [ngClass]="{'row-accessories': product.category === 'Accessories'}"> -->
+                    <tr *ngFor="let item of candidates; let index=index">
+                    <td>{{index+1}}</td>
+                    <td>{{ item.sno || '--'}}</td>
+                    <td>{{ item.name || '--'}}</td>
+                    <td>{{ item.contact || '--'}}</td>
+                    <td>{{ item.email || '--'}}</td>
+                    <td>{{ item.city || '--'}}</td>
+                    <td>{{ item.createdDate | date:'dd/mm/yyyy'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <!-- <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    Candidate List
+                </div>
+                <div class="card-body"> -->
+                    <!-- <div class="row">
+                        <div class="col-3">
+                            <input type="text" class="form-control" [(ngModel)]="filterObj.Name"
+                                placeholder="Search By Name">
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control" [(ngModel)]="filterObj.ContactNo"
+                                placeholder="Search By Mobile">
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control" [(ngModel)]="filterObj.Email"
+                                placeholder="Search By Email">
+                        </div> -->
+                    <!-- <div class="col-3">
+                        <app-my-button [text]="'Search'" [btnClass]="'btn-sm btn-success'" (onBtnClick)="filetrCandidates($event)"> </app-my-button>
+
+                        <button class="btn btn-sm btn-success" (click)="filetrCandidates($event)">Search</button>
+                    </div> -->
+                <!-- </div> -->
+                <!-- <div class="row">
+                    <div class="col-2">
+                        <div class="dataTables_length"><label>Show
+                                <select [(ngModel)]="filterObj.PageSize" (change)="filetrCandidates('')">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select> entries</label>
+                        </div>
+                    </div>
+                    <div class="col-md-10" style="float:right;text-align: right">
+                        <div class="paginations">
+                            <div>
+                                <div class="btn-group" id="radioBtn">
+                                    <a class="btn btn-primary btn-sm notActive" (click)="onPrevious()"> Previous
+                                    </a>
+                                    <a class="btn btn-primary btn-sm active">{{filterObj.PageNumber}}</a>
+                                    <a class="btn btn-primary btn-sm notActive" (click)="onNext()">Next </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 pt-2" *ngFor="let item of candidates;let index =index">
+                        <app-list-card [obj]="item"> </app-list-card> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+<!-- </div> -->
+
+<!-- </div> -->

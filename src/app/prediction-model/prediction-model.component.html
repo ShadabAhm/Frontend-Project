@@ -1,0 +1,79 @@
+<div class="PredictionForm p-3">
+    <div class=" mt-1 page-content grid grid-nogutter">
+        <div class="col-12">
+            <div class=" mt-4">
+                <h2 class="heading-text mt-4 font-medium">Prediction Model and Inputs</h2>
+                <p class="p-text mt-4 font-medium">The following predictions are being done using the BL_GB
+                    <br><span> Model</span></p>
+            </div>
+        </div>
+    </div>
+    <form class="prediction-form mt-6" [formGroup]="predictionForm">
+        <div class="grid">
+            <div class="col-12 h-23rem mt-0 ">
+                <div class="grid gap-5">
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="tenure">Enter Tenure (Months)</label>
+                            <input type="text" pInputText formControlName="tenure" class="gap-3" />
+                            <div class="text-danger">
+                                @if(predictionForm.controls['tenure'].touched &&
+                                predictionForm.controls['tenure'].errors?.['required']){
+                                <span>This is required</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="monthlyCharges">Enter Monthly Charges</label>
+                            <input type="text" pInputText formControlName="monthlyCharges" class="gap-3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid gap-5 mt-1">
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="totalCharges">Total Charges</label>
+                            <input type="text" pInputText formControlName="totalCharges" class="gap-3" />
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="onlineSecurity">Select Online Security</label>
+                            <input type="text" pInputText />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid gap-5 mt-3">
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="techSupport">Select Tech Support</label>
+                            <input type="text" pInputText />
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="contract">Select Contract</label>
+                            <input type="text" pInputText />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid gap-5 mt-3">
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="paperlessBilling">Select Paperless Billing</label>
+                            <input type="text" pInputText />
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-5">
+                        <div class="flex flex-column gap-3 mr-0 md:mr-6">
+                            <label id="SelectPaymentMethod">Select Payment Method</label>
+                            <input type="text" pInputText class="gap-3" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+<body>
+    <div class="wrapper">
+        <form>
+            <a class="layout-topbar-logo flex flex-column align-items-center mb-4" routerLink="">
+                <img src="assets/images/logo-img.png" alt="Image" class="w-6rem" />
+            </a>
+            <div class="input-box">
+                <input [(ngModel)]="userObj.userName" type="text" name="userName" placeholder="Enter Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input [(ngModel)]="userObj.email" type="text" name="email" placeholder="Enter email" required>
+                <i class='bx bxs-user'></i>
+            </div>
+    
+            <div class="input-box">
+                <input [(ngModel)]="userObj.password" type="password" name="password" placeholder="Enter password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+
+            <div class="input-box">
+                <input [(ngModel)]="userObj.confirmPassword" type="password" name="password" placeholder="Confirm password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+
+            <div *ngIf="errorMessage" class="error-message">
+                {{ errorMessage }}
+            </div>
+    
+            <button class="btn" type="submit" (click)="onRegister()">Register</button>
+    
+            <div class="register-link">
+                <p>Already have an account? <br> <a routerLink="/login">Login</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+

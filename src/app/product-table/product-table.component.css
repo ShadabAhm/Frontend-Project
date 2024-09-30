@@ -1,0 +1,28 @@
+.p-datatable {
+  width: 100%;
+  margin: 10px auto;
+  
+}
+.p-datatable th{
+  background-color: blue !important;
+  color: #fff;
+}
+
+.p-datatable th,
+.p-datatable td {
+  text-align: left;
+  padding: 10px;
+ 
+}
+
+.p-paginator-info {
+  text-align: left;
+  margin-top: 10px;
+  color: #555;
+}
+
+
+.selected-cell {
+  background-color: #EF6536 !important;
+  color: white;
+}

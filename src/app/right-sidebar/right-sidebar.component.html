@@ -1,0 +1,21 @@
+<div class="page-container">
+    <div class="right-sidebar flex flex-column" [ngClass]="{ 'right-sidebar-hidden': !visible }">
+        <div class="justify-content-center mt-1">
+            <div class="p-1">
+                <div *ngFor="let item of menuItems" class="cursor-pointer menu-items p-3 border-round flex align-items-center mb-1">
+                    <i class="{{ item.icon }} mr-3"></i>
+                    <a [routerLink]="item.routerLink">{{ item.label }}</a>
+                </div>
+            </div>
+            <hr><br>
+            <span class="text-muted font-bold p-0 otr-btn">Other</span>
+            <div class="p-3 mt-auto">
+                <div *ngFor="let item of otherItems" class="cursor-pointer other-items p-3 border-round flex align-items-center mb-1">
+                    <i class="{{ item.icon }} mr-3"></i>
+                    <a [routerLink]="item.routerLink">{{ item.label }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

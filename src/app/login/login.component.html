@@ -1,0 +1,24 @@
+<body>
+    <div class="wrapper flex align-items-center justify-content-center">
+        <form class="surface-card p-4 shadow-2 border-round w-full sm:w-30rem">
+            <a class="layout-topbar-logo flex flex-column align-items-center mb-4" routerLink="">
+                <img src="assets/images/logo-img.png" alt="Image" class="w-6rem" />
+            </a>
+            <div class="input-box mb-3 p-inputgroup">
+                <input pInputText [(ngModel)]="userObj.userName" type="text" name="userName" placeholder="Username"
+                    class="p-inputtext w-full" required>
+            </div>
+
+            <div class="input-box mb-3 p-inputgroup">
+                <input pInputText [(ngModel)]="userObj.password" type="password" name="password" placeholder="Password"
+                    class="p-inputtext w-full" required>
+            </div>
+
+            <button pButton class=" btn w-full mb-3" type="submit" label="Login" (click)="onLogin()">Login</button>
+
+            <div class="register-link text-center">
+                <p>Don't have an account? <br> <a routerLink="/register">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
